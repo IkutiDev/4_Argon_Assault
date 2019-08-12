@@ -3,31 +3,32 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityStandardAssets.CrossPlatformInput;
 
-public class Player : MonoBehaviour
+public class PlayerController : MonoBehaviour
 {
-    [Tooltip("In ms^-1")][SerializeField] private float speed = 20f;
+    [Header("General")]
+    [Tooltip("In ms^-1")][SerializeField] private float controlSpeed = 20f;
 
     [SerializeField] private float xScreenEdgeValue = 10f;
 
     [SerializeField] private float yScreenEdgeValue = 6f;
-
+    [Header("Screen-position Based")]
     [SerializeField] private float positionPitchFactor = -4f;
     [SerializeField] private float positionYawFactor=4f;
+    [Header("Control-throw ")]
     [SerializeField] private float controlPitchFactor = -24f;
     [SerializeField] private float controlRollFactor = -24f;
 
     private float xThrow, yThrow;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
+    private bool isDead;
     // Update is called once per frame
     void Update()
     {
-        Movement();
-        Rotating();
+        if (!isDead)
+        {
+            Movement();
+            Rotating();
+        }
     }
 
     private void Rotating()
@@ -38,19 +39,23 @@ public class Player : MonoBehaviour
         float rollDueToControlThrow=xThrow* controlRollFactor;
         transform.localRotation= Quaternion.Euler(pitchDueToControlThrow, yawDueToPosition, rollDueToControlThrow);
     }
-
     private void Movement()
     {
         yThrow = CrossPlatformInputManager.GetAxis("Vertical");
-        float yOffset = yThrow * speed * Time.deltaTime;
+        float yOffset = yThrow * controlSpeed * Time.deltaTime;
 
         float rawYPos = transform.localPosition.y + yOffset;
         float clampedYPos = Mathf.Clamp(rawYPos, -yScreenEdgeValue, yScreenEdgeValue);
         xThrow = CrossPlatformInputManager.GetAxis("Horizontal");
-        float xOffset = xThrow * speed * Time.deltaTime;
+        float xOffset = xThrow * controlSpeed * Time.deltaTime;
 
         float rawXPos = transform.localPosition.x + xOffset;
         float clampedXPos = Mathf.Clamp(rawXPos, -xScreenEdgeValue, xScreenEdgeValue);
         transform.localPosition = new Vector3(clampedXPos, clampedYPos, transform.localPosition.z);
+    }
+
+    private void TurnOffControls()
+    {
+        isDead = true;
     }
 }
