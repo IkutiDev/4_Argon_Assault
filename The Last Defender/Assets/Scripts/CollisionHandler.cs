@@ -9,6 +9,7 @@ public class CollisionHandler : MonoBehaviour
 
     [Tooltip("In seconds")] [SerializeField] private float levelLoadDelay = 1f;
     [Tooltip("FX prefab on player")][SerializeField] private GameObject deathFx;
+
     private void OnTriggerEnter(Collider other)
     {
         StartDeathSequence();
