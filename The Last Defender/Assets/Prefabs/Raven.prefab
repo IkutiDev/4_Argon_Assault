@@ -135,6 +135,11 @@ MonoBehaviour:
   positionYawFactor: 3
   controlPitchFactor: -20
   controlRollFactor: -55
+  guns:
+  - {fileID: 5707583762115205763}
+  - {fileID: 486860901952417726}
+  - {fileID: 486860902604654241}
+  - {fileID: 486860902506636870}
 --- !u!114 &-81846848562206196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -216,8 +221,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bedc858c02090b24c93a3b0731e94685, type: 3}
+--- !u!1 &5707583762115205763 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5329100143220531430, guid: bedc858c02090b24c93a3b0731e94685,
+    type: 3}
+  m_PrefabInstance: {fileID: 486860903288846949}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &5707583762115205760 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5329100143220531429, guid: bedc858c02090b24c93a3b0731e94685,
@@ -291,8 +317,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bedc858c02090b24c93a3b0731e94685, type: 3}
+--- !u!1 &486860902604654241 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5329100143220531430, guid: bedc858c02090b24c93a3b0731e94685,
+    type: 3}
+  m_PrefabInstance: {fileID: 5707583762538325575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &486860902604654242 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5329100143220531429, guid: bedc858c02090b24c93a3b0731e94685,
@@ -366,8 +413,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bedc858c02090b24c93a3b0731e94685, type: 3}
+--- !u!1 &486860902506636870 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5329100143220531430, guid: bedc858c02090b24c93a3b0731e94685,
+    type: 3}
+  m_PrefabInstance: {fileID: 5707583762973034144}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &486860902506636869 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5329100143220531429, guid: bedc858c02090b24c93a3b0731e94685,
@@ -441,8 +509,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.type
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5329100143220531427, guid: bedc858c02090b24c93a3b0731e94685,
+        type: 3}
+      propertyPath: CollisionModule.collisionMessages
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bedc858c02090b24c93a3b0731e94685, type: 3}
+--- !u!1 &486860901952417726 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5329100143220531430, guid: bedc858c02090b24c93a3b0731e94685,
+    type: 3}
+  m_PrefabInstance: {fileID: 5707583763459002200}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &486860901952417725 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5329100143220531429, guid: bedc858c02090b24c93a3b0731e94685,
@@ -521,14 +610,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8458436498665844914, guid: fcb0c77aa6682f941a8e4697c38d2ada,
-        type: 3}
-      propertyPath: playOnAwake
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 8458436498665844876, guid: fcb0c77aa6682f941a8e4697c38d2ada,
         type: 3}
       propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8458436498665844914, guid: fcb0c77aa6682f941a8e4697c38d2ada,
+        type: 3}
+      propertyPath: playOnAwake
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [Header("General")]
     [Tooltip("In ms^-1")][SerializeField] private float controlSpeed = 20f;
+    [SerializeField] private GameObject[] guns;
 
     [SerializeField] private float xScreenEdgeValue = 10f;
 
@@ -17,6 +18,7 @@ public class PlayerController : MonoBehaviour
     [Header("Control-throw ")]
     [SerializeField] private float controlPitchFactor = -24f;
     [SerializeField] private float controlRollFactor = -24f;
+    
 
     private float xThrow, yThrow;
 
@@ -28,6 +30,35 @@ public class PlayerController : MonoBehaviour
         {
             Movement();
             Rotating();
+            ProcessFiring();
+        }
+    }
+
+    private void ProcessFiring()
+    {
+        if (CrossPlatformInputManager.GetButton("Fire"))
+        {
+            ActivateGuns();
+        }
+        else
+        {
+            DeactivateGuns();
+        }
+    }
+
+    private void DeactivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(false);
+        }
+    }
+
+    private void ActivateGuns()
+    {
+        foreach (GameObject gun in guns)
+        {
+            gun.SetActive(true);
         }
     }
 

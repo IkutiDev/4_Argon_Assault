@@ -94,3 +94,4 @@ MonoBehaviour:
   deathFx: {fileID: 8458436498665844877, guid: 5ed65a7d641685647bdaf0113d98201c, type: 3}
   parent: {fileID: 0}
   scoreForEnemy: 48
+  hits: 20
