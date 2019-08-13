@@ -19,6 +19,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float controlPitchFactor = -24f;
     [SerializeField] private float controlRollFactor = -24f;
     
+    
 
     private float xThrow, yThrow;
 
@@ -32,33 +33,28 @@ public class PlayerController : MonoBehaviour
             Rotating();
             ProcessFiring();
         }
+        
     }
 
     private void ProcessFiring()
     {
         if (CrossPlatformInputManager.GetButton("Fire"))
         {
-            ActivateGuns();
+            SetGunsActive(true);
         }
         else
         {
-            DeactivateGuns();
+            SetGunsActive(false);
         }
     }
 
-    private void DeactivateGuns()
-    {
-        foreach (GameObject gun in guns)
-        {
-            gun.SetActive(false);
-        }
-    }
 
-    private void ActivateGuns()
+    private void SetGunsActive(bool isActive)
     {
         foreach (GameObject gun in guns)
         {
-            gun.SetActive(true);
+            ParticleSystem.EmissionModule gunEmissionModule= gun.GetComponent<ParticleSystem>().emission;
+            gunEmissionModule.enabled = isActive;
         }
     }
 
